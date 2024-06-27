@@ -33,20 +33,22 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-#include "Hello.hpp"
-#include "Exception.hpp"
+#ifndef HELLO_VERTEXMODELEXPERIMENT_HPP_
+#define HELLO_VERTEXMODELEXPERIMENT_HPP_
 
-Hello::Hello(const std::string& rMessage)
-    : mMessage(rMessage)
-{
-}
+#include <string>
 
-std::string Hello::GetMessage()
+class Hello_VertexModelExperiment
 {
-    return mMessage;
-}
+private:
+    std::string mMessage;
 
-void Hello::Complain(const std::string& rComplaint)
-{
-    EXCEPTION(rComplaint);
-}
+public:
+    Hello_VertexModelExperiment(const std::string& rMessage);
+
+    std::string GetMessage();
+
+    void Complain(const std::string& rComplaint);
+};
+
+#endif /*HELLO_VERTEXMODELEXPERIMENT_HPP_*/

@@ -33,15 +33,15 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 */
 
-#ifndef TESTHELLO_HPP_
-#define TESTHELLO_HPP_
+#ifndef TESTHELLO_VERTEXMODELEXPERIMENT_HPP_
+#define TESTHELLO_VERTEXMODELEXPERIMENT_HPP_
 
 #include <cxxtest/TestSuite.h>
 /* Most Chaste code uses PETSc to solve linear algebra problems.  This involves starting PETSc at the beginning of a test-suite
  * and closing it at the end.  (If you never run code in parallel then it is safe to replace PetscSetupAndFinalize.hpp with FakePetscSetup.hpp)
  */
 #include "PetscSetupAndFinalize.hpp"
-#include "Hello.hpp"
+#include "Hello_VertexModelExperiment.hpp"
 
 /**
  * @file
@@ -51,7 +51,7 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * shortcut to compile and link against the correct libraries using scons).
  *
  * You can #include any of the files in the project 'src' folder.
- * For example here we #include "Hello.hpp"
+ * For example here we #include "Hello_VertexModelExperiment.hpp"
  *
  * You can utilise any of the code in the main the Chaste trunk
  * in exactly the same way.
@@ -60,14 +60,14 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * components of Chaste.
  */
 
-class TestHello : public CxxTest::TestSuite
+class TestHello_VertexModelExperiment : public CxxTest::TestSuite
 {
 public:
-    void TestHelloClass()
+    void TestHello_VertexModelExperimentClass()
     {
         // Create an object called 'world' of class 'Hello',
-        // (Hello.hpp is #included from the 'src' folder.)
-        Hello world("Hello world!");
+        // (Hello_VertexModelExperiment.hpp is #included from the 'src' folder.)
+        Hello_VertexModelExperiment world("Hello world!");
 
         // The TS_ASSERT macros are used to test that the object performs as expected
         TS_ASSERT_EQUALS(world.GetMessage(), "Hello world!");
@@ -76,4 +76,4 @@ public:
     }
 };
 
-#endif /*TESTHELLO_HPP_*/
+#endif /*TESTHELLO_VERTEXMODELEXPERIMENT_HPP_*/
